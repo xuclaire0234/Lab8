@@ -53,14 +53,15 @@ public class CustomListTest {
 
     @Test
     void testDelete(){
-
+        list = MockCityList();
         City city = mockCity();
-//        list.add(city);
+        list.addCity(city);
         list.delete(city);
         assertThrows(IllegalArgumentException.class, ()->{list.delete(city);});
         assertFalse(list.hasCity(city));
 
     }
+
 
 
 
