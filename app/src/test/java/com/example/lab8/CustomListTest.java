@@ -64,12 +64,12 @@ public class CustomListTest {
 
     @Test
     void testCountCity(){
-
-//        list.countCity();
-        assertEquals(1,list.countCity());
+        list = MockCityList();
+        list.countCity();
+        assertEquals(0,list.countCity());
         City city = new City("Calgary", "AB");
         list.addCity(city);
-        assertEquals(2,list.countCity());
+        assertEquals(1,list.countCity());
 
     }
 
